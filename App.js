@@ -7,7 +7,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{backgroundColor: 'blue',alignItems: 'center', justifyContent: 'center',flex: 1, height:height}}/>
+        <View style={{backgroundColor: 'rgba(255,0, 0, 0.2)',alignItems: 'center', justifyContent: 'center',flex: 1, height:height}}/>
         <View style={{backgroundColor: 'yellow',flex: 0.1, height:height}}/>
       </View>
     )
@@ -19,7 +19,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     height: height,
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     flexDirection: 'row'
   }
 })
+
+//rgba(1, 1, 1, 0.1)
+// rgb
+// #ffffff
