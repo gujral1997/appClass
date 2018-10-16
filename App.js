@@ -1,5 +1,12 @@
 import React from 'react'
 import { View, Text, Dimensions, StyleSheet} from 'react-native'
+const center = {
+  alignItems: 'center', justifyContent: 'center', borderWidth: 2, borderRightColor: 'transparent'
+}
+
+const color = {
+ color: 'white'
+}
 
 const { width, height } = Dimensions.get('window')
 
@@ -7,8 +14,30 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{backgroundColor: 'rgba(255,0, 0, 0.2)',alignItems: 'center', justifyContent: 'center',flex: 1, height:height}}/>
-        <View style={{backgroundColor: 'yellow',flex: 0.1, height:height}}/>
+      <View style={styles.subView}>
+        <View style={{backgroundColor: 'red', flex: 1, ...center }}>
+        <Text style={{...color}}>1</Text>
+        </View>
+        <View style={{backgroundColor: 'green', flex: 1, ...center}}>
+        <Text>2</Text>
+        </View>
+        <View style={{backgroundColor: 'purple', flex: 1}}/>
+      </View>
+      <View style={styles.subView}>
+        <View style={{backgroundColor: 'yellow', flex: 1}}/>
+        <View style={{backgroundColor: 'pink', flex: 1}}/>
+        <View style={{backgroundColor: 'magenta', flex: 1}}/>
+      </View>
+      <View style={styles.subView}>
+        <View style={{backgroundColor: 'green', flex: 1}}/>
+        <View style={{backgroundColor: 'purple', flex: 1}}/>
+        <View style={{backgroundColor: 'yellow', flex: 1}}/>
+      </View>
+      <View style={styles.subView}>
+        <View style={{backgroundColor: 'yellow', flex: 1}}/>
+        <View style={{backgroundColor: 'orange', flex: 1}}/>
+        <View style={{backgroundColor: 'green', flex: 1}}/>
+      </View>
       </View>
     )
   }
@@ -16,11 +45,15 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container:{
-    alignItems: 'center',
-    justifyContent: 'center',
     height: height,
-    backgroundColor: 'white',
-    flexDirection: 'row'
+    width: width,
+    backgroundColor: 'white'
+  },
+  subView: {
+    height: height/4,
+    width: width,
+    flexDirection: 'row',
+    backgroundColor: 'blue'
   }
 })
 
